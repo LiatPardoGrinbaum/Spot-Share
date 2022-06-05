@@ -8,7 +8,7 @@ import "./forum.css";
 import spinner from "../../assets/spinner.gif";
 
 function Forum() {
-  const { isSpinning, setIsSpinning, forumArr, setForumArr, isLogged } = useContext(myContext);
+  const { isSpinning, setIsSpinning, forumArr, setForumArr, isLogged, term, setTerm } = useContext(myContext);
   // const [forumArr, setForumArr] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,12 @@ function Forum() {
   }, [isLogged]);
   // ^ term- if search input change. isLogged- if user sign in or out i want the forum component to re-render.
   const insertPosts = () => {
-    const sortedPosts = forumArr.sort((a, b) => b.id - a.id);
+    const filteredPosts = forumArr.filter((post) => {
+      if (post.content.toLowerCase().includes(term.toLowerCase()) || post.subject.toLowerCase().includes(term.toLowerCase()) || post.name.toLowerCase().includes(term.toLowerCase())) {
+        return post;
+      }
+    });
+    const sortedPosts = filteredPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
     return sortedPosts.map((post, index) => {
       return <Post key={index} {...post} /*  HandleDelete={onHandleDelete} */ />;
     });
@@ -63,6 +68,10 @@ function Forum() {
           <img src={spinner} />
         </div>
       )}
+      <div>
+        <label htmlFor="search">חיפוש לפי מילה: </label>
+        <input id="search" type="text" placholder="חיפוש" value={term} onChange={(e) => setTerm(e.target.value)} />{" "}
+      </div>
       <div className="posts-container">{insertPosts()}</div>
     </div>
   );

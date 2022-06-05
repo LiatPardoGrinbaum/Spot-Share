@@ -5,7 +5,7 @@ export const myContext = createContext();
 function ContextProvider({ children }) {
   const [forumArr, setForumArr] = useState([]);
   const [isLogged, setisLogged] = useState(false);
-
+  const [term, setTerm] = useState("");
   const [isSpinning, setIsSpinning] = useState(false);
   const [newSubject, setNewSubject] = useState("");
   const [newContent, setNewContent] = useState("");
@@ -28,6 +28,6 @@ function ContextProvider({ children }) {
 
     return currentTime;
   };
-  return <myContext.Provider value={{ isSpinning, setIsSpinning, newSubject, setNewSubject, newContent, setNewContent, newDate, setNewDate, newName, setNewName, newemail, setNewemail, isAccepted, setisAccepted, setIsCreated, forumArr, setForumArr, getCurrentTime, isLogged, setisLogged }}>{children}</myContext.Provider>;
+  return <myContext.Provider value={{ isSpinning, setIsSpinning, newSubject, setNewSubject, newContent, setNewContent, newDate, setNewDate, newName, setNewName, newemail, setNewemail, isAccepted, setisAccepted, setIsCreated, forumArr, setForumArr, getCurrentTime, isLogged, setisLogged, term, setTerm }}>{children}</myContext.Provider>;
 }
 export default ContextProvider;

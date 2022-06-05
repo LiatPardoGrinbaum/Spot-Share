@@ -41,6 +41,14 @@
   font-weight: lighter;
   color: grey;
 }
+.main-post {
+  background: #d2a89e99;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 8px 0px;
+  box-sizing: border-box;
+}
 .btnDisabled {
   min-width: 85px;
   padding: 5px;

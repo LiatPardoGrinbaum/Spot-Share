@@ -21,16 +21,14 @@ function Login() {
 
   function handleSignOut(event) {
     setisLogged((prev) => !prev);
-
     setUser({});
-
     localStorage.clear();
     document.getElementById("signInDiv").hidden = false;
   }
 
   useEffect(() => {
     /* global google */
-
+    localStorage.clear();
     google.accounts.id.initialize({
       client_id: "491218794514-a02tfou4b43u8mfokr659ditr8n074je.apps.googleusercontent.com",
       callback: handleCallbackResponse,
