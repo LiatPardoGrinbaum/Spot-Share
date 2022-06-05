@@ -7,27 +7,27 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <nav className="links">
-        <nav>
+        <div className="effect">
           <NavLink to="/" className="link" exact={true}>
             דף הבית
           </NavLink>
-        </nav>
-        <nav>
+        </div>
+        <div className="effect">
           <NavLink to="/about" className="link">
             אודות
           </NavLink>
-        </nav>
-        <nav>
+        </div>
+        <div className="effect">
           <NavLink to="/forum" className="link">
             שתפו אותנו
           </NavLink>
-        </nav>
+        </div>
       </nav>
-      <nav className="logo">
-        <NavLink to="/" className="logo-link">
-          <span className="red">Spot</span> <span className="grey">&</span> <span className="green">Share</span>
-        </NavLink>
-      </nav>
+      <div className="logo">
+        {/* <NavLink to="/" className="logo-link" exact={true}> */}
+        <span className="red">Spot</span> <span className="grey">&</span> <span className="green">Share</span>
+        {/* </NavLink> */}
+      </div>
       <Login />
     </div>
   );

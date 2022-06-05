@@ -10,52 +10,123 @@
   width: 100%;
   /* padding: 0.5rem; */
   gap: 10px;
-  background: #f4f4f4ce;
+  background: #f8ab9a99;
   /* box-shadow: rgba(73, 234, 33, 0.27) 0px 1px 1px 0px inset, rgba(63, 184, 44, 0.25) 0px 50px 100px -20px, rgba(57, 192, 19, 0.3) 0px 30px 60px -30px; */
   z-index: 1;
 }
 .logo {
-  margin-left: 1.5rem;
+  /* margin-left: 1.5rem; */
   font-size: 42px;
   font-weight: bold;
   font-family: "Oleo Script", cursive;
   width: 250px;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  direction: ltr;
 }
 
 .red {
   color: rgb(172, 73, 73);
 }
 .green {
-  color: rgb(105, 167, 58);
+  color: rgb(87, 129, 55);
 }
 .grey {
   color: rgb(64, 64, 64);
 }
-.logo-link {
+/* .logo-link {
   text-decoration: none;
   color: black;
-}
+} */
 .links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-right: 1.5rem;
-  width: 250px;
+  width: 330px;
+  /* gap: 1rem; */
 }
 .links .link {
   text-decoration: none;
   color: black;
   font-size: 1rem;
   border-bottom: 2px solid transparent;
-  margin: 0px;
+  margin: 5px;
+  color: rgb(36, 45, 30);
 }
 
 .links a {
   padding: 0;
+  margin: 0;
+  z-index: 1;
 }
-
-nav a.active {
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div a.active {
   text-decoration: none;
   font-weight: bold;
+}
+
+/* nav div {
+  height: 50px;
+  width: 70px;
+  background: greenyellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.links div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  margin: 5px;
+  width: 100px;
+  transition: 1s;
+}
+/* .links div:hover {
+  border-bottom: rgb(186, 75, 75) solid 2px;
+} */
+.effect {
+  /* width: 100%;
+  height: 100%; */
+  position: relative;
+}
+.effect:before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-top: 2px rgb(172, 73, 73) solid;
+  transition: all 0.3s;
+  visibility: hidden;
+}
+
+.effect:hover:before {
+  border-top: 2px rgb(172, 73, 73) solid;
+  width: 100%;
+  visibility: visible;
+}
+
+.effect:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  bottom: 0;
+  right: 0; /*note to myself: right bottom, not left! */
+  border-bottom: 2px rgb(172, 73, 73) solid;
+  transition: all 0.3s;
+  visibility: hidden;
+}
+
+.effect:hover:after {
+  border-bottom: 2px rgb(172, 73, 73) solid;
+  width: 100%;
+  visibility: visible;
 }

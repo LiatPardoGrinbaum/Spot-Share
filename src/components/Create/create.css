@@ -13,3 +13,27 @@
 ::placeholder {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+#subjectInput {
+  width: 400px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: rgba(124, 122, 113, 0.297) 0px 7px 29px 0px;
+  margin-bottom: 10px;
+}
+#contentInput {
+  resize: none;
+  width: 400px;
+  height: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  box-shadow: rgba(124, 122, 113, 0.297) 0px 7px 29px 0px;
+}
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 400px;
+}

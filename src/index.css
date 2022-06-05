@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  background: url("./assets/IMG_.jpg") no-repeat center center/cover;
+  background: url("./assets/fruits.jpg") no-repeat center center/cover;
   background-attachment: fixed; /* works for all pages when written here, not in the app container class! */
   /* // make all pages have the scroll bar without changing size */
   /* overflow-y: hidden; */
