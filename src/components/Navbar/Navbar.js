@@ -1,32 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./navbar.css";
+import Login from "../login/Login";
 
 const Navbar = () => {
   return (
     <div className="navbar-container">
-      <div className="links">
-        <div>
-          <Link to="/" className="link">
+      <nav className="links">
+        <nav>
+          <NavLink to="/" className="link" exact={true}>
             דף הבית
-          </Link>
-        </div>
-        <div>
-          <Link to="/about" className="link">
+          </NavLink>
+        </nav>
+        <nav>
+          <NavLink to="/about" className="link">
             אודות
-          </Link>
-        </div>
-        <div>
-          <Link to="/forum" className="link">
+          </NavLink>
+        </nav>
+        <nav>
+          <NavLink to="/forum" className="link">
             שתפו אותנו
-          </Link>
-        </div>
-      </div>
-      <div className="logo">
-        <Link to="/" className="logo-link">
-          Spot & Share
-        </Link>
-      </div>
+          </NavLink>
+        </nav>
+      </nav>
+      <nav className="logo">
+        <NavLink to="/" className="logo-link">
+          <span className="red">Spot</span> <span className="grey">&</span> <span className="green">Share</span>
+        </NavLink>
+      </nav>
+      <Login />
     </div>
   );
 };

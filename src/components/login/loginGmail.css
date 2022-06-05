@@ -2,7 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 250px;
 }
+.logGamil h3 {
+  margin: 0;
+}
+
 /* 
 .signInDiv {
 
