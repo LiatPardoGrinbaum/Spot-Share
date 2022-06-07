@@ -1,14 +1,14 @@
 .homePage {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   flex-direction: column;
-  height: auto;
+  /* height: auto; */
   /* font-family: "Overlock SC", cursive; */
-  /* margin-top: 80px; */
+  margin-top: 80px;
 
-  height: 100%;
+  /* height: 100%; */
 }
 
 .boxes-container {
@@ -18,22 +18,33 @@
   text-align: center;
   width: 100%;
   gap: 30px;
+  /* flex-wrap: wrap; */
 }
 .box-right {
-  width: 25%;
+  width: 300px;
   height: 400px;
-
   border-radius: 80px;
-
-  /* background: rgba(255, 255, 255, 0.41); */
   background: url("../../assets/fruitbag.jpg") no-repeat center center/cover;
   box-shadow: rgba(8, 26, 9, 0.35) 0px 5px 15px;
 }
 .box-left {
-  width: 40%;
-  height: 400px;
-
+  width: 500px;
+  min-height: 400px;
+  margin: 0px 10px;
+  padding: 5px;
   border-radius: 80px;
   background: rgba(222, 158, 78, 0.529);
   box-shadow: rgba(8, 26, 9, 0.35) 0px 5px 15px;
+}
+.box-left p {
+  text-align: right;
+  direction: rtl;
+}
+@media (max-width: 900px) {
+  .boxes-container {
+    flex-wrap: wrap;
+  }
+  .homePage {
+    margin-top: 50px;
+  }
 }

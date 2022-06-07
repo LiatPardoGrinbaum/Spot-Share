@@ -11,10 +11,12 @@ const Create = (props) => {
     const handleCreatePost = async (newUserPost) => {
       try {
         const createdPost = await API.post("/parkur", newUserPost);
+        console.log("this is created post:", createdPost);
+        // console.log(createdPost);
         setIsCreated(true);
         setIsSpinning(false);
         setForumArr((prev) => {
-          return [...prev, createdPost];
+          return [...prev, createdPost.data];
         });
         props.history.push("/forum");
       } catch (err) {

@@ -18,6 +18,11 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="effect">
+          <NavLink to="/map" className="link">
+            מפה
+          </NavLink>
+        </div>
+        <div className="effect share">
           <NavLink to="/forum" className="link">
             שתפו אותנו
           </NavLink>

@@ -1,0 +1,67 @@
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.googlemap {
+  width: 100%;
+  margin: 0;
+}
+
+.h2map {
+  position: absolute;
+  z-index: 2;
+  background: rgba(245, 245, 245, 0.688);
+  padding: 10px;
+}
+.popup {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+
+  position: absolute;
+  background: white;
+  width: 180px;
+  min-height: 150px;
+
+  right: 0;
+  z-index: 3;
+  border-radius: 20px;
+  margin-right: 25px;
+  margin-top: 10px;
+  padding: 10px;
+  direction: rtl;
+}
+
+.popup-edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.popup-edit label {
+  width: 160px;
+  text-align: right;
+}
+.popup input {
+  border-radius: 5px;
+  width: 160px;
+}
+.popup textarea {
+  border-radius: 5px;
+  width: 160px;
+}
+.popup-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  margin-top: 10px;
+}
+.popup-button button {
+  padding: 5px;
+  border-radius: 5px;
+}
