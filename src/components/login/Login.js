@@ -9,16 +9,6 @@ function Login() {
   const [user, setUser] = useState({});
   // const [localUser, setLocalUser] = useState({});
 
-  function handleCallbackResponse(response) {
-    setisLogged((prev) => !prev);
-    console.log("Encoded JWT ID token: " + response.credential);
-    var userObject = jwt_decode(response.credential);
-
-    setUser(userObject);
-    document.getElementById("signInDiv").hidden = true;
-    localStorage.setItem("user", JSON.stringify(userObject));
-  }
-
   function handleSignOut(event) {
     setisLogged((prev) => !prev);
     setUser({});
@@ -29,6 +19,16 @@ function Login() {
   useEffect(() => {
     /* global google */
     localStorage.clear();
+
+    function handleCallbackResponse(response) {
+      setisLogged((prev) => !prev);
+      console.log("Encoded JWT ID token: " + response.credential);
+      var userObject = jwt_decode(response.credential);
+
+      setUser(userObject);
+      document.getElementById("signInDiv").hidden = true;
+      localStorage.setItem("user", JSON.stringify(userObject));
+    }
     google.accounts.id.initialize({
       client_id: "491218794514-a02tfou4b43u8mfokr659ditr8n074je.apps.googleusercontent.com",
       callback: handleCallbackResponse,
@@ -36,7 +36,7 @@ function Login() {
 
     google.accounts.id.renderButton(document.getElementById("signInDiv"), { theme: "outline", size: "large" });
     google.accounts.id.prompt();
-  }, [handleCallbackResponse]);
+  }, [setisLogged]);
 
   return (
     <div className="logGamil">
