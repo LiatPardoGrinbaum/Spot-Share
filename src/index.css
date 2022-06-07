@@ -10,7 +10,8 @@ body {
   background: url("./assets/fruits.jpg") no-repeat center center/cover;
   background-attachment: fixed; /* works for all pages when written here, not in the app container class! */
   /* // make all pages have the scroll bar without changing size */
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
+  overflow-y: scroll;
 }
 
 code {
