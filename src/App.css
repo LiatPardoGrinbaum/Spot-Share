@@ -39,12 +39,11 @@
   height: calc(100vh - 80px);
   /* background: white cover; */
 
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
   position: relative;
 
   background: rgba(255, 255, 255, 0.396) center center/cover;
 
-  overflow-y: scroll;
   /* top: 80px; */
   direction: ltr;
 }

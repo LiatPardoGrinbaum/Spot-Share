@@ -149,6 +149,17 @@ div a.active {
     gap: 0;
   }
   .logo {
+    order: 0;
+  }
+}
+@media (max-width: 650px) {
+  .navbar-container {
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  .logo {
     order: -1;
   }
 }
