@@ -1,71 +1,37 @@
-# Getting Started with Create React App
+# 🎯Spot & Share🍊 ## Appleseeds Mid Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is my first personal project, in AppleSeeds fullstack development bootcamp.
 
-## Available Scripts
+# Description
 
-In the project directory, you can run:
+The website was built in ReactJS and it will be a place for people from my town to add posts and share information about free public fruit trees or herbal plants, and for people who have private trees in their garden, to share for free their agricultural products.  
+The site was written in hebrew so it can serve people in Pardes Hana Karkur , Israel.
 
-### `npm start`
+There are two main ways to share that information:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. The Forum page which is the page people can write posts. There's an option to log in with google and then you can also delete or update your post, as well as to write it as anonymous (and then you can't delete or update it).
+2. Google Map platform. Anyone can enter the Map page to add markers of locations and edit them with information.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In this project I implemented the following subjects:
 
-### `npm test`
+- CRUD
+- API Calls
+- Routes
+- hooks
+- google login
+- react google map/api library
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# How did I get the idea for this project?
 
-### `npm run build`
+I started thinking about a project which will have a positive impact on my environment and the local community. I got the idea from my husband as we both share the love of finding some free public trees or herbs that we can collect. I also asked in my neighborhood WhatsApp group for ideas and got the same idea from my neighbor Ruth. Then I realise it might be a real need!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Challenges I faced:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The most challenging part for me was to work with the google cloud platform (google map library which was new to me, as well as the google login platform).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Last words...
 
-### `npm run eject`
+I have learned a lot from this project, and also had the chance to implement the new subjects I have learned in the course, such as Hooks in functional components.  
+I hope it will indeed be in use by people from my community.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Mid-Project-Appleseeds
+&copy; Liat Pardo Grinbaum &copy;
