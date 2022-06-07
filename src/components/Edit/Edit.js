@@ -1,11 +1,11 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { myContext } from "../context/myContext";
-import { NavLink, Link } from "react-router-dom";
+
 import API from "../Api";
 import "./edit.css";
 
 const Edit = (props) => {
-  const { setIsSpinning, forumArr, setForumArr, setIsCreated, getCurrentTime } = useContext(myContext);
+  const { setIsSpinning, forumArr, setForumArr, getCurrentTime } = useContext(myContext);
 
   const [editSubject, setEditSubject] = useState(props.location.state.subject);
   const [editContent, setEditContent] = useState(props.location.state.content);

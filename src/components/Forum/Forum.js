@@ -1,6 +1,5 @@
-import react from "react";
 import { NavLink } from "react-router-dom";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { myContext } from "../context/myContext";
 import Post from "../Post/Post";
 import API from "../Api";
@@ -9,7 +8,6 @@ import spinner from "../../assets/spinner.gif";
 
 function Forum() {
   const { isSpinning, setIsSpinning, forumArr, setForumArr, isLogged, term, setTerm } = useContext(myContext);
-  // const [forumArr, setForumArr] = useState([]);
 
   useEffect(() => {
     setIsSpinning(true);
@@ -24,7 +22,7 @@ function Forum() {
     } catch (err) {
       console.log(err);
     }
-  }, [isLogged]);
+  }, [isLogged, setForumArr, setIsSpinning]);
   // ^ term- if search input change. isLogged- if user sign in or out i want the forum component to re-render.
   const insertPosts = () => {
     console.log("this is forumArr in insertposts:");
@@ -71,7 +69,7 @@ function Forum() {
       </div>
       {isSpinning && (
         <div className="spinner">
-          <img src={spinner} />
+          <img src={spinner} alt="spinner" />
         </div>
       )}
       <div>

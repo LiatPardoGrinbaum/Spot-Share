@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
-import { myContext } from "../context/myContext";
+import React, { useState } from "react";
+
 import { NavLink } from "react-router-dom";
 import PopUp from "../PopUp/PopUp";
 import "./post.css";

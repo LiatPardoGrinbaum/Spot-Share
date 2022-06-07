@@ -40,7 +40,6 @@ function MapGoogle() {
   const [selected, setSelected] = React.useState(null);
   const [loc, setloc] = React.useState(null);
   const [isPopUpOpen, setIsPopUpOpen] = React.useState(false);
-  const [description, setDescription] = React.useState("");
   const [initMarker, setInitMarker] = React.useState(false);
 
   useEffect(() => {
@@ -66,16 +65,6 @@ function MapGoogle() {
       lng: event.latLng.lng(),
     });
     setInitMarker(true);
-    console.log("it's loc", loc);
-    // setMarkers((current) => [
-    //   ...current,
-    //   {
-    //     lat: event.latLng.lat(),
-    //     lng: event.latLng.lng(),
-
-    //     description: "",
-    //   },
-    // ]);
   }, []);
   // const inputRef = React.useRef();
   const mapRef = React.useRef();

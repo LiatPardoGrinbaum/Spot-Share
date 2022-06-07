@@ -36,7 +36,7 @@ function Login() {
 
     google.accounts.id.renderButton(document.getElementById("signInDiv"), { theme: "outline", size: "large" });
     google.accounts.id.prompt();
-  }, []);
+  }, [handleCallbackResponse]);
 
   return (
     <div className="logGamil">
