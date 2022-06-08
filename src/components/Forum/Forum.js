@@ -38,22 +38,9 @@ function Forum() {
       return post.content.toLowerCase().includes(term.toLowerCase()) || post.subject.toLowerCase().includes(term.toLowerCase()) || post.name.toLowerCase().includes(term.toLowerCase());
     });
     return filteredPosts.map((post, index) => {
-      return <Post key={index} {...post} /*  HandleDelete={onHandleDelete} */ />;
+      return <Post key={index} {...post} />;
     });
   };
-  /*   const onHandleDelete = async (id) => {
-    setIsSpinning(true);
-    try {
-      await API.delete(`/parkur/${id}`);
-      //////
-      this.setState((prev) => {
-        const newShoesArr = prev.shoesArr.filter((shoe) => shoe.id !== id);
-        return { shoesArr: newShoesArr, isSpinner: false };
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  }; */
 
   return (
     <div className="forum-wrapper">
@@ -64,7 +51,7 @@ function Forum() {
           נשמח שתשתפו אותנו :)
         </p>
         <NavLink to="/create" className="link" exact={true}>
-          <button className="create btn">צור הודעה חדשה</button>
+          <button className="create btn">יצירת הודעה חדשה</button>
         </NavLink>
       </div>
       {isSpinning && (

@@ -3,13 +3,16 @@
 .create-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   flex-direction: column;
   height: auto;
   /* font-family: "Overlock SC", cursive; */
-  margin-top: 80px;
+  /* margin-top: 80px; */
   direction: rtl;
+  background: rgba(255, 255, 255, 0.396) center center/cover;
+  height: 100%;
+  margin-top: 80px;
 }
 
 ::placeholder {

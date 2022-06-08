@@ -26,10 +26,10 @@ const Post = ({ id, content, name, subject, date, userEmail }) => {
           <React.Fragment>
             <div className="buttons">
               <button className="btn" onClick={HandleDelete}>
-                מחק
+                מחיקה
               </button>
               <NavLink to={{ pathname: "/edit", state: { id, content, name, subject, date, userEmail } }} className="link">
-                <button className="btn">עדכן</button>
+                <button className="btn">עידכון</button>
               </NavLink>
             </div>
           </React.Fragment>
@@ -39,11 +39,11 @@ const Post = ({ id, content, name, subject, date, userEmail }) => {
           <React.Fragment>
             <div className="buttons">
               <button className="btnDisabled" onClick={HandleDelete} disabled>
-                מחק
+                מחיקה
               </button>
               <NavLink to={{ pathname: "/edit", state: { id, content, name, subject, date, userEmail } }} className="link">
                 <button className="btnDisabled" disabled>
-                  עדכן
+                  עידכון
                 </button>
               </NavLink>
             </div>

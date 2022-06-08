@@ -4,6 +4,7 @@
   align-items: center;
   max-width: 1200px;
   margin: auto;
+  overflow: hidden;
 }
 .googlemap {
   width: 100%;

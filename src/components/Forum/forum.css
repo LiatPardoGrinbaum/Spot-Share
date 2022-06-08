@@ -17,6 +17,8 @@
   overflow: scroll; */
   margin-bottom: 20px;
   direction: rtl;
+
+  background: rgba(255, 255, 255, 0.396) center center/cover;
 }
 .top-contianer {
   display: flex;
@@ -52,6 +54,9 @@
   background: rgb(106, 157, 28);
   color: white;
   cursor: pointer;
+}
+.btn:hover {
+  background: rgb(78, 113, 42);
 }
 
 .spinner img {

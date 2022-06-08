@@ -1,0 +1,33 @@
+.Instructions-container {
+  display: flex;
+
+  background: rgba(203, 201, 201, 0.566);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  z-index: 1;
+}
+
+.Ins-popup-window {
+  width: 350px;
+  min-height: 200px;
+  background: #f4f4f4;
+  gap: 20px;
+  border: 2px solid rgb(71, 176, 71);
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  direction: rtl;
+  text-align: right;
+  padding: 5px;
+}
+.Ins-popup-window p {
+  margin: 0;
+}
+
+/* buttonsPop css style came from Popup.css */
