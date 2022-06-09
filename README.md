@@ -36,4 +36,6 @@ The most challenging part for me was to work with the google cloud platform (goo
 I have learned a lot from this project, and also had the chance to implement the new subjects I have learned in the course, such as Hooks in functional components.  
 I hope it will indeed be in use by people from my community.
 
+[Link to Spot&Share](https://spot-and-share-liat.netlify.app/)
+
 &copy; Liat Pardo Grinbaum &copy;
