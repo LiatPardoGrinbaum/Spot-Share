@@ -13,12 +13,13 @@
   gap: 20px;
 
   scroll-behavior: smooth;
-  /* height: 100vh;
-  overflow: scroll; */
+  /* height: calc(100vh- 80px); */
+  /* overflow-y: scroll; */
   margin-bottom: 20px;
   direction: rtl;
 
   background: rgba(255, 255, 255, 0.396) center center/cover;
+  /* background-attachment: fixed; */
 }
 .top-contianer {
   display: flex;

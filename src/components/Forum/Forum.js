@@ -25,16 +25,15 @@ function Forum() {
   }, [isLogged, setForumArr, setIsSpinning]);
   // ^ term- if search input change. isLogged- if user sign in or out i want the forum component to re-render.
   const insertPosts = () => {
-    console.log("this is forumArr in insertposts:");
-    console.log(forumArr);
-
     const sortedPosts = forumArr.sort((a, b) => new Date(b.date) - new Date(a.date));
+    console.log("forumArr is", forumArr);
+    console.log("sortedPosts is", sortedPosts);
 
     const filteredPosts = sortedPosts.filter((post) => {
-      console.log("this is inside filter");
-      console.log(sortedPosts);
-      console.log("this is post");
-      console.log(post);
+      // console.log("this is inside filter");
+      // console.log(sortedPosts);
+      // console.log("this is post");
+      // console.log(post);
       return post.content.toLowerCase().includes(term.toLowerCase()) || post.subject.toLowerCase().includes(term.toLowerCase()) || post.name.toLowerCase().includes(term.toLowerCase());
     });
     return filteredPosts.map((post, index) => {
