@@ -6,7 +6,7 @@ import PopupEditMarker from "./PopupEditMarker";
 import API from "../Api";
 // import "@reach/combobox/styles.css"; ///???
 // import mapStyles from "./mapStyles"; //if i want another style, should add an array (9.20 video) https://snazzymaps.com/
-
+//http://localhost:3000 --> add it to cloud platform if I want the map be active on local host
 const libraries = ["places"];
 const mapContainerStyle = {
   width: "100vw",
