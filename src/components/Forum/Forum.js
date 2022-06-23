@@ -15,6 +15,7 @@ function Forum() {
     try {
       const getData = async () => {
         const { data } = await API.get("/parkur");
+
         setForumArr(data);
         setIsSpinning(false);
       };
@@ -25,9 +26,12 @@ function Forum() {
   }, [isLogged, setForumArr, setIsSpinning]);
   // ^ term- if search input change. isLogged- if user sign in or out i want the forum component to re-render.
   const insertPosts = () => {
-    const sortedPosts = forumArr.sort((a, b) => new Date(b.date) - new Date(a.date));
-    console.log("forumArr is", forumArr);
-    console.log("sortedPosts is", sortedPosts);
+    console.log(forumArr);
+    const sortedPosts = forumArr.sort((a, b) => {
+      // console.log("new Date(date1)", new Date(date1)); //!invalid date..?!
+
+      return new Date(b.dateToSort) - new Date(a.dateToSort);
+    });
 
     const filteredPosts = sortedPosts.filter((post) => {
       // console.log("this is inside filter");

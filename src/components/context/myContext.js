@@ -24,6 +24,7 @@ function ContextProvider({ children }) {
     setIsCreated(false);
   }
   const getCurrentTime = () => {
+    // let currentTime = new Date().toLocaleString();
     let currentTime = new Date().toLocaleString();
 
     return currentTime;

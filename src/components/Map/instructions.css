@@ -16,15 +16,14 @@
 
 .Ins-popup-window {
   width: 350px;
-  min-height: 200px;
-  background: #f4f4f4;
+  min-height: 220px;
+  background: rgb(243, 250, 219);
   gap: 20px;
-  border: 2px solid rgb(71, 176, 71);
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   direction: rtl;
   text-align: right;
-  padding: 5px;
+  padding: 8px;
 }
 .Ins-popup-window p {
   margin: 0;

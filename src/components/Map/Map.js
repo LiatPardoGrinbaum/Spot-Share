@@ -70,7 +70,17 @@ function MapGoogle() {
   return (
     <div>
       {isInstrctions && <Instructions setIsInstrctions={setIsInstrctions} />}
-
+      {isPopUpOpen && (
+        <PopupEditMarker
+          setInitMarker={setInitMarker}
+          setIsPopUpOpen={setIsPopUpOpen}
+          loc={loc}
+          onSubmit={(marker) => {
+            // console.log(marker);
+            setMarkers((prev) => [...prev, marker]);
+          }}
+        />
+      )}
       {isInstrctions === false && (
         <div>
           <h2 className="h2map">
@@ -115,17 +125,6 @@ function MapGoogle() {
                 </div>
               </InfoWindow>
             ) : null}
-            {isPopUpOpen && (
-              <PopupEditMarker
-                setInitMarker={setInitMarker}
-                setIsPopUpOpen={setIsPopUpOpen}
-                loc={loc}
-                onSubmit={(marker) => {
-                  // console.log(marker);
-                  setMarkers((prev) => [...prev, marker]);
-                }}
-              />
-            )}
           </GoogleMap>{" "}
         </div>
       )}

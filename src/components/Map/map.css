@@ -17,6 +17,23 @@
   background: rgba(245, 245, 245, 0.688);
   padding: 10px;
 }
+
+.popup-mark-container {
+  display: flex;
+
+  background: rgba(203, 201, 201, 0.566);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  z-index: 1;
+}
+
 .popup {
   display: flex;
 
@@ -24,17 +41,17 @@
   flex-direction: column;
 
   position: absolute;
-  background: white;
-  width: 180px;
-  min-height: 150px;
+  background: rgb(243, 250, 219);
+  width: 350px;
+  min-height: 200px;
 
-  right: 0;
   z-index: 3;
   border-radius: 20px;
   margin-right: 25px;
   margin-top: 10px;
   padding: 10px;
   direction: rtl;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .popup-edit {
@@ -44,23 +61,27 @@
   flex-direction: column;
 }
 .popup-edit label {
-  width: 160px;
+  width: 250px;
   text-align: right;
 }
 .popup input {
   border-radius: 5px;
-  width: 160px;
+  width: 250px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
 }
 .popup textarea {
   border-radius: 5px;
-  width: 160px;
+  width: 250px;
+  height: 100px;
+  border: 1px solid #ccc;
 }
 .popup-buttons {
   display: flex;
   align-items: center;
   justify-content: space-around;
 
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .popup-button button {
   padding: 5px;

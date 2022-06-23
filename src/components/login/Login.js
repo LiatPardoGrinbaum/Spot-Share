@@ -22,7 +22,7 @@ function Login() {
 
     function handleCallbackResponse(response) {
       setisLogged((prev) => !prev);
-      console.log("Encoded JWT ID token: " + response.credential);
+      // console.log("Encoded JWT ID token: " + response.credential);
       var userObject = jwt_decode(response.credential);
 
       setUser(userObject);

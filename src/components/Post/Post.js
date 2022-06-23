@@ -14,7 +14,6 @@ const Post = ({ id, content, name, subject, date, userEmail }) => {
     const userObj = JSON.parse(localStorage.getItem("user"));
 
     if (userObj === null) {
-      console.log("it is null!!!");
       return (
         <div className="edit-message">
           <p>על מנת לערוך או למחוק תגובות יש להתחבר עם gmail </p>

@@ -18,22 +18,27 @@ const PopupEditMarker = ({ onSubmit, loc, setInitMarker, setIsPopUpOpen }) => {
     setIsPopUpOpen(false);
   };
   return (
-    <div className="popup">
-      <div className="popup-edit">
-        <label htmlFor="popupsubject">נושא:</label>
-        <input ref={inputRef} type="text" id="popupsubject" />
-        <label htmlFor="popupcontent">תיאור:</label>
-        <textarea ref={textareRef} type="text" id="popupcontent" />
-      </div>
-      <div className="popup-buttons">
-        <button onClick={onHandleClick}>שמירה</button>
-        <button
-          onClick={() => {
-            setInitMarker(false);
-            setIsPopUpOpen(false);
-          }}>
-          ביטול
-        </button>
+    <div className="popup-mark-container">
+      <div className="popup">
+        <div className="popup-edit">
+          <label htmlFor="popupsubject">נושא:</label>
+          <input ref={inputRef} type="text" id="popupsubject" />
+          <label htmlFor="popupcontent">תיאור:</label>
+          <textarea ref={textareRef} type="text" id="popupcontent" />
+        </div>
+        <div className="popup-buttons">
+          <button className="btn" onClick={onHandleClick}>
+            שמירה
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              setInitMarker(false);
+              setIsPopUpOpen(false);
+            }}>
+            ביטול
+          </button>
+        </div>
       </div>
     </div>
   );

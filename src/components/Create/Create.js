@@ -5,7 +5,7 @@ import API from "../Api";
 import "./create.css";
 
 const Create = (props) => {
-  const { newSubject, setNewSubject, newContent, setNewContent, setIsSpinning, setForumArr, setIsCreated, getCurrentTime } = useContext(myContext);
+  const { newSubject, setNewSubject, newContent, setNewContent, setIsSpinning, setForumArr, setIsCreated } = useContext(myContext);
   const userObj = JSON.parse(localStorage.getItem("user"));
   const handelCreate = () => {
     const handleCreatePost = async (newUserPost) => {
@@ -16,7 +16,8 @@ const Create = (props) => {
         setIsCreated(true);
         setIsSpinning(false);
         setForumArr((prev) => {
-          return [...prev, createdPost.data];
+          return [createdPost.data, ...prev];
+          // return [createdPost.data, ...prev];
         });
         props.history.push("/forum");
       } catch (err) {
@@ -25,13 +26,16 @@ const Create = (props) => {
     };
 
     setIsSpinning(true);
+    const date = new Date();
+    // console.log("date → ", date);
     if (userObj === null) {
       const newUserPost = {
         subject: newSubject,
         content: newContent,
         userEmail: "",
         name: "אנונימי / ת",
-        date: getCurrentTime(),
+        date: date.toLocaleString(),
+        dateToSort: date,
       };
       handleCreatePost(newUserPost);
     } else {
@@ -40,7 +44,8 @@ const Create = (props) => {
         content: newContent,
         userEmail: userObj.email,
         name: userObj.name,
-        date: getCurrentTime(),
+        date: date.toLocaleString(),
+        dateToSort: date,
       };
       handleCreatePost(newUserPost);
     }

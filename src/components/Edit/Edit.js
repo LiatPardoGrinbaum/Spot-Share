@@ -19,7 +19,8 @@ const Edit = (props) => {
     });
 
     try {
-      const updatedPostObj = { ...postObjToBeUpdate, subject: editSubject, content: editContent, date: getCurrentTime() };
+      const date = new Date();
+      const updatedPostObj = { ...postObjToBeUpdate, subject: editSubject, content: editContent, date: date.toLocaleString(), dateToSort: date };
       const { data } = await API.put(`/parkur/${id}`, updatedPostObj);
       //not sure if here below (and in Create too) is necessary because any time Forum is rendering it gets the new data from the API.
       setForumArr((prev) => {
