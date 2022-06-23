@@ -18,17 +18,14 @@ function ContextProvider({ children }) {
   if (isCreated) {
     setNewSubject("");
     setNewContent("");
-    // setNewDate("");
-    // setNewName("");
-    // setNewemail("");
     setIsCreated(false);
   }
-  const getCurrentTime = () => {
-    // let currentTime = new Date().toLocaleString();
-    let currentTime = new Date().toLocaleString();
+  // const getCurrentTime = () => {
+  //   // let currentTime = new Date().toLocaleString();
+  //   let currentTime = new Date().toLocaleString();
 
-    return currentTime;
-  };
-  return <myContext.Provider value={{ isSpinning, setIsSpinning, newSubject, setNewSubject, newContent, setNewContent, newDate, setNewDate, newName, setNewName, newemail, setNewemail, isAccepted, setisAccepted, setIsCreated, forumArr, setForumArr, getCurrentTime, isLogged, setisLogged, term, setTerm }}>{children}</myContext.Provider>;
+  //   return currentTime;
+  // };
+  return <myContext.Provider value={{ isSpinning, setIsSpinning, newSubject, setNewSubject, newContent, setNewContent, newDate, setNewDate, newName, setNewName, newemail, setNewemail, isAccepted, setisAccepted, setIsCreated, forumArr, setForumArr, isLogged, setisLogged, term, setTerm }}>{children}</myContext.Provider>;
 }
 export default ContextProvider;

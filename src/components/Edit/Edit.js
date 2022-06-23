@@ -5,7 +5,7 @@ import API from "../Api";
 import "./edit.css";
 
 const Edit = (props) => {
-  const { setIsSpinning, forumArr, setForumArr, getCurrentTime } = useContext(myContext);
+  const { setIsSpinning, forumArr, setForumArr } = useContext(myContext);
 
   const [editSubject, setEditSubject] = useState(props.location.state.subject);
   const [editContent, setEditContent] = useState(props.location.state.content);
