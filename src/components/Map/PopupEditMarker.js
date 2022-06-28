@@ -21,7 +21,8 @@ const PopupEditMarker = ({ onSubmit, loc, setInitMarker, setIsPopUpOpen }) => {
     <div className="popup-mark-container">
       <div className="popup">
         <div className="popup-edit">
-          <label htmlFor="popupsubject">נושא:</label>
+          <h3>הוספת סימון חדש:</h3>
+          <label htmlFor="popupsubject">כותרת:</label>
           <input ref={inputRef} type="text" id="popupsubject" />
           <label htmlFor="popupcontent">תיאור:</label>
           <textarea ref={textareRef} type="text" id="popupcontent" />
