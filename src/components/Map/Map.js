@@ -22,7 +22,7 @@ const options = {
 };
 function MapGoogle() {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.API_KEY,
+    googleMapsApiKey: "AIzaSyCrRN_ZXZoYGhQInIGmyeyOoBQKliDB-Pc",
     libraries,
   });
   const [markers, setMarkers] = React.useState([]);
