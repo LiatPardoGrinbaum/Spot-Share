@@ -88,3 +88,17 @@
   padding: 5px;
   border-radius: 5px;
 }
+
+.infoWindowStyle {
+  direction: rtl;
+  margin-left: 20px;
+  padding: 8px;
+  background: rgb(241, 245, 216);
+}
+.infoWindowStyle > h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.infoWindowStyle > p {
+  font-size: 14px;
+}

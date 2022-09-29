@@ -135,7 +135,7 @@ function MapGoogle() {
                 onCloseClick={() => {
                   setSelected(null);
                 }}>
-                <div style={{ textAlign: "right" }}>
+                <div className="infoWindowStyle" style={{ textAlign: "right" }}>
                   <h3>{selected.subject}</h3>
                   <p>{selected.description}</p>
                 </div>
